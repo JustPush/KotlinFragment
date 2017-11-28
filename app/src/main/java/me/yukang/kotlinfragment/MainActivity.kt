@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.fragment_holder, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+        isFragmentOneLoaded = true
     }
 
     private fun showFragmentTwo() {
@@ -36,5 +37,6 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.fragment_holder, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+        isFragmentOneLoaded = false
     }
 }
